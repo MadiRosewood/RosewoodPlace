@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Settings - Nitro Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C2F33;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #7289DA;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            background: #23272A;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #5E5E5E;
+            border-radius: 5px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #99AAB5;
+        }
+        .nitro-effect {
+            background: linear-gradient(90deg, #F04747, #A843B2);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .setting {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .save-button {
+            background-color: #43B581;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .save-button:hover {
+            background-color: #3BAA6E;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Discord Settings</h1>
+    <div class="container">
+        <div class="section nitro-effect">
+            <h2>Nitro Benefits</h2>
+            <p>Unlock exclusive features and enhancements with Nitro!</p>
+        </div>
+
+        <div class="section">
+            <h2>Account Settings</h2>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Enable Two-Factor Authentication
+                </label>
+            </div>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Allow Friend Requests from Everyone
+                </label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Privacy & Safety</h2>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Enable Safety Check
+                </label>
+            </div>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Allow DMs from Server Members
+                </label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Notification Settings</h2>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Mute All Notifications
+                </label>
+            </div>
+            <div class="setting">
+                <label>
+                    <input type="checkbox"> Enable Desktop Notifications
+                </label>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="save-button">Save Changes</button>
+        </div>
+    </div>
+
+</body>
+</html>
