@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // Hide all sections
-            const allSections = document.querySelectorAll('#profile, #Minecraft, #settings');
+            const allSections = document.querySelectorAll('#home, #profile, #Minecraft, #settings');
             allSections.forEach(section => {
                 section.style.display = 'none';
             });
