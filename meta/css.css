@@ -37,6 +37,18 @@ body {
   background-position: center;
 }
 
+#home ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+       #hone li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
 .chat-container {
   position: fixed;
   bottom: 0;
