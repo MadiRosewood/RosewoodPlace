@@ -31,6 +31,15 @@ nav a {
 main {
     padding: 20px;
 }
+#t1 {
+color: #000;
+background-color: #fffffff;
+}
+
+#t2 {
+color: #000;
+background-color: #FFA500;
+}
 
 h2 {
     color: #333;
