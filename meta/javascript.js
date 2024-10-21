@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // Hide all sections
-            const allSections = document.querySelectorAll('#home, #profile, #Minecraft, #settings');
+            const allSections = document.querySelectorAll('#home, #profile, #Minecraft, #settings,#settings #register,#settings #login');
             allSections.forEach(section => {
                 section.style.display = 'none';
             });
 
+            
             // Show the corresponding section
             const targetId = this.querySelector('a').getAttribute('href').substring(1);
             document.getElementById(targetId).style.display = 'block';
