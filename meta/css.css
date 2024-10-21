@@ -36,7 +36,10 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+#home nav {
+  height: 60vh; /* Set the body height to the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 #home nav ul {
             list-style-type: none;
             padding-left: 0;
