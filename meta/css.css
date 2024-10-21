@@ -1,8 +1,8 @@
 /* Hide sections by default */
-home,
-profile,
-Minecraft,
-settings {
+#home,
+#profile,
+#Minecraft,
+#settings {
   position: fixed;
   width: 400px;
   height: 70px;
