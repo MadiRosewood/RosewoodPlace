@@ -1,0 +1,20 @@
+{
+    "users": {
+        "Madi": {
+            "name": "Madison",
+            "prn": "Female",
+            "quote": "Placeholder",
+            "ht": "5'0",
+            "age": "22",
+            "bio": "Placeholder"
+        },
+        "Moon": {
+            "name": "Placeholder",
+            "prn": "Female",
+            "quote": "Placeholder",
+            "ht": "Placeholder",
+            "age": "Placeholder",
+            "bio": "Placeholder"
+        }
+    }
+}
