@@ -70,6 +70,7 @@ flex-direction : column;
     /* Set the height to half the viewport */
     overflow-y: hidden;
     /* Enable vertical scrolling */
+display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, #2196f3, #e91e63);
