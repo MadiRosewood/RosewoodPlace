@@ -11,7 +11,8 @@ body {
             #6f71fb 80%,
             #8890ff 80%,
             #8890ff 100%);
-    display: flex;
+    display: flex;
+flex-direction : column;
     /* Allow header, body, and footer to stack */
     justify-content: center;
     align-items: center;
