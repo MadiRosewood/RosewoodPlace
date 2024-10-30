@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosewood Place</title>
+    <title>Rosewood Place | Madi</title>
     <link rel="stylesheet" href="AboutMe/styles/madi.css">
 </head>
+
 <body>
     <h1 class="Header">About Madi</h1>
     <footer>
@@ -16,38 +18,35 @@
     </footer>
     <div class="body" id="users">
         <div id="Madi">
-            <img class="img" src="https://placehold.co/128x128">
+            <img class="img" id="madiImage" src="" alt="Madi's Image"> <!-- Empty image tag -->
             <h1><span id="Name">Placeholder</span></h1>
             <p>Quote: <span id="Quote"></span></p>
             <p>Gender: <span id="Prn"></span></p>
             <p>Age: <span id="Age"></span></p>
             <p>Height: <span id="Ht"></span></p>
             <p>Bio: <span id="Bio"></span></p>
+
         </div>
     </div>
-    <script type="module">
-        const path = 'file:///C:/Users/Jujub/Documents/GitHub/RosewoodPlace'
-        const apiUrl = path +'/AboutMe/scripts/Database.json'; // Define your API URL here
+    <script src="./AboutMe/scripts/Database.js"></script> <!-- Include the JavaScript file -->
+    <script>
+        // Access the Madi data
+        const users = data.users;
 
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Access the Madi data correctly from the fetched data
-                const users = data.users; // Assuming your JSON structure has a 'users' key
+        if (users && users.Madi) {
+            document.getElementById("Name").textContent = users.Madi.name || "Name not available";
+            document.getElementById("Quote").textContent = users.Madi.quote || "Quote not available";
+            document.getElementById("Prn").textContent = users.Madi.prn || "Pronouns not available";
+            document.getElementById("Age").textContent = users.Madi.age || "Age not available";
+            document.getElementById("Ht").textContent = users.Madi.ht || "Height not available";
+            document.getElementById("Bio").textContent = users.Madi.bio || "Bio not available";
 
-                document.getElementById("Name").textContent = users.Madi.name;
-                document.getElementById("Quote").textContent = users.Madi.quote;
-                document.getElementById("Prn").textContent = users.Madi.prn;
-                document.getElementById("Age").textContent = users.Madi.age;
-                document.getElementById("Ht").textContent = users.Madi.ht;
-                document.getElementById("Bio").textContent = users.Madi.bio;
-            })
-            .catch(error => console.error('Error fetching data:', error));
+            // Set the image source
+            document.getElementById("madiImage").src = users.Madi.image || ""; // Set image source from the data
+        } else {
+            console.error('Madi data not found in the JSON');
+        }
     </script>
 </body>
+
 </html>
