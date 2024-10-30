@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon</title>
+    <link rel="stylesheet" href="AboutMe/styles/moon.css">
+</head>
+
+<body>
+    <h1 class="Header">About Moon</h1>
+    
+    <div class="body" id="users">
+        <div id="Moon">
+            <img class="img" id="moonImage" src="" alt="Moon's Image"> <!-- Empty image tag -->
+            <h1><span id="Name">Placeholder</span></h1>
+            <p>Quote: <span id="Quote"></span></p>
+            <p>Gender: <span id="Prn"></span></p>
+            <p>Age: <span id="Age"></span></p>
+            <p>Height: <span id="Ht"></span></p>
+            <p>Bio: <span id="Bio"></span></p>
+
+        </div>
+    </div>
+    <script src="./AboutMe/scripts/Database.js"></script> <!-- Include the JavaScript file -->
+    <script>
+        // Access the Moon data
+        const users = data.users;
+
+        if (users && users.Moon) {
+            document.getElementById("Name").textContent = users.Moon.name || "Name not available";
+            document.getElementById("Quote").textContent = users.Moon.quote || "Quote not available";
+            document.getElementById("Prn").textContent = users.Moon.prn || "Pronouns not available";
+            document.getElementById("Age").textContent = users.Moon.age || "Age not available";
+            document.getElementById("Ht").textContent = users.Moon.ht || "Height not available";
+            document.getElementById("Bio").textContent = users.Moon.bio || "Bio not available";
+
+            // Set the image source
+            document.getElementById("moonImage").src = users.Moon.image || ""; // Set image source from the data
+        } else {
+            console.error('Moon data not found in the JSON');
+        }
+    </script>
+</body>
+
+</html>
