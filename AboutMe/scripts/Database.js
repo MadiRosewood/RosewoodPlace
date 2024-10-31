@@ -10,13 +10,13 @@ const data = {
             "image": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-5AA80D0F091CF9C283BF0F516A2562FE-Png/150/150/AvatarHeadshot/Webp/noFilter" // Add an image URL here
         },
         "Moon": {
-            "name": "Moon",
+            "name": "𝖒𝖔𝖔𝖓",
             "quote": "Expect the unexpected!",
             "prn": "She/Her",
             "age": 20,
             "ht": "N/A",
-            "bio": "A short bio about Moon.",
-            "image": "https://placehold.co/128x128" // Add an image URL here
+            "bio": "𝕮𝖆𝖑𝖑 𝖒𝖊 𝖒𝖔𝖔𝖓~",
+            "image": "./AboutMe/img/moon.jpg"
         }
     }
 };
