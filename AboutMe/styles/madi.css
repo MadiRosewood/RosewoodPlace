@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg,
+            #f5a5bf 0%,
+            #f5a5bf 20%,
+            #f8709d 20%,
+            #f8709d 40%,
+            #29004a 40%,
+            #29004a 60%,
+            #6f71fb 60%,
+            #6f71fb 80%,
+            #8890ff 80%,
+            #8890ff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px; /* Add padding for smaller devices */
+}
+
+.img {
+    width: 25vw; /* Use viewport width for responsiveness */
+    height: 25vw; /* Maintain a square aspect ratio */
+    max-width: 150px; /* Limit maximum size */
+    max-height: 150px; /* Limit maximum size */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.Header {
+    width: 100%;
+    padding: 20px;
+    color: pink;
+    text-shadow: -1px -1px 0 rebeccapurple,
+                 1px -1px 0 rebeccapurple,
+                 -1px 1px 0 rebeccapurple,
+                 1px 1px 0 rebeccapurple;
+    background: linear-gradient(-75deg,
+            #2196f3 0%,
+            #2196f3 15%,
+            #ffbdd3 15%,
+            #ffbdd3 30%,
+            #fff 30%,
+            #fff 65%,
+            #ffbdd3 65%,
+            #ffbdd3 80%,
+            #2196f3 80%,
+            #2196f3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.body {
+    width: 100%; /* Use full width */
+    max-width: 600px; /* Limit max width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer .text {
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    margin: 5px 0;
+    padding: 10px 40px 10px 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: pink;
+    text-align: center;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .img {
+        width: 40vw; /* Increase size on smaller devices */
+        height: 40vw; /* Maintain aspect ratio */
+    }
+
+    .Header {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .body {
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer .text {
+        padding: 8px 30px; /* Adjust footer text padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        font-size: 1.2em; /* Adjust font size for small devices */
+    }
+
+    footer .text {
+        padding: 8px 20px; /* Further adjust footer text padding */
+    }
+}
