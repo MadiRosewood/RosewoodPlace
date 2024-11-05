@@ -9,15 +9,22 @@
     <title>Rosewood Place</title>
     <link rel="stylesheet" href="meta/css.css">
     <script>
-      (function() {
+    (function() {
     var currentUrl = window.location.href;
 
     // Check if the URL contains '#home' (which is an anchor link)
     if (currentUrl.includes('#home')) {
-        var newUrl = currentUrl.split('#')[0] + 'home'; // Remove the '#home' and use the clean URL
-        history.pushState(null, '', newUrl); // Update the URL without reloading the page
+        // Remove '#home' and append 'home' to the URL
+        var newUrl = currentUrl.split('#')[0] + 'home';
+        
+        // If it contains 'index.html', ensure it's replaced
+        newUrl = newUrl.replace('index.html', ''); // Remove 'index.html' if present
+
+        // Update the URL without reloading the page
+        history.pushState(null, '', newUrl);
     }
 })();
+
 
     </script>
      <script src="./meta/remove-html-extension.js"></script> <!-- Include the JavaScript file -->
