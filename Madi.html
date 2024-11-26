@@ -1,53 +1,128 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosewood Place | Madi</title>
-    <link rel="stylesheet" href="AboutMe/styles/madi.css">
+    <title>Rosewood Place | Chat </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            background: #292929;
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 80%;
+            position: relative;
+        }
+
+        .user {
+            align-self: flex-end;
+            background: #007BFF;
+            color: #ffffff;
+        }
+
+        .chatgpt {
+            align-self: flex-start;
+            background: #333;
+            color: #ffffff;
+        }
+
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            font-size: smaller;
+            color: #ccc;
+            text-align: center;
+        }
+
+        #chat-form {
+            width: 100%;
+            max-width: 600px;
+            /* Limit form width if needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #chat-form input[type="text"] {
+            width: calc(100% - 80px);
+            /* Adjust as needed */
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            /* Rounded corners on the left */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        #chat-form input[type="submit"] {
+            width: 80px;
+            /* Fixed width for the submit button */
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            /* Rounded corners on the right */
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios CDN -->
 </head>
 
 <body>
-    <h1 class="Header">About Madi</h1>
-    <footer>
-        <a href="index.html#home">
-            <span class="text">Home</span>
-        </a>
-    </footer>
-    <div class="body" id="users">
-        <div id="Madi">
-            <img class="img" id="madiImage" src="" alt="Madi's Image"> <!-- Empty image tag -->
-            <h1><span id="Name">Placeholder</span></h1>
-            <p>Quote: <span id="Quote"></span></p>
-            <p>Gender: <span id="Prn"></span></p>
-            <p>Age: <span id="Age"></span></p>
-            <p>Height: <span id="Ht"></span></p>
-            <p>Bio: <span id="Bio"></span></p>
 
+    <div class="chat-container">
+        <div class="message chatgpt">
+            <strong>ChatGPT:</strong> Hi! How can I assis you today?
         </div>
+
+
+
     </div>
-    <script src="./AboutMe/scripts/Database.js"></script> <!-- Include the JavaScript file -->
-    <script src="./meta/remove-html-extension.js"></script> <!-- Include the JavaScript file -->
-    <script>
-        // Access the Madi data
-        const users = data.users;
+    <footer>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <input type="submit" value="Send">
+        </form>
+    </footer>
+    <a href="index.html#home"><span class="text" style="
+        text-decoration: none;
+        background: linear-gradient(45deg, #2196f3, #e91e63);
+        margin: 10px 0;
+        padding: 10px 40px 10px 30px; /* Add padding to accommodate the graphic */
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: pink;
+        text-align: center;
+        font-weight: 500;">Home</span></a>
 
-        if (users && users.Madi) {
-            document.getElementById("Name").textContent = users.Madi.name || "Name not available";
-            document.getElementById("Quote").textContent = users.Madi.quote || "Quote not available";
-            document.getElementById("Prn").textContent = users.Madi.prn || "Pronouns not available";
-            document.getElementById("Age").textContent = users.Madi.age || "Age not available";
-            document.getElementById("Ht").textContent = users.Madi.ht || "Height not available";
-            document.getElementById("Bio").textContent = users.Madi.bio || "Bio not available";
-
-            // Set the image source
-            document.getElementById("madiImage").src = users.Madi.image || ""; // Set image source from the data
-        } else {
-            console.error('Madi data not found in the JSON');
-        }
-    </script>
+    <script src="meta/DaVinci.js"></script>
 </body>
 
 </html>
