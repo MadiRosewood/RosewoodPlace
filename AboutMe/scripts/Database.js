@@ -7,7 +7,7 @@ const data = {
             "age": 22,
             "ht": "5'0\"",
             "bio": "A short bio about Madi, shorter than madi.",
-            "image": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-5AA80D0F091CF9C283BF0F516A2562FE-Png/150/150/AvatarHeadshot/Webp/noFilter" // Add an image URL here
+            "image": "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&amp;y=150&amp;Format=Png&amp;username=MadiRosewoods" // Add an image URL here
         },
         "Moon": {
             "name": "𝖒𝖔𝖔𝖓",
