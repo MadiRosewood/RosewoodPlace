@@ -58,6 +58,21 @@ fetch(apiUrl)
         // Update server players
         document.getElementById('playersOnline').textContent = data.players.online;
         document.getElementById('playersMax').textContent = data.players.max;
+        // Update players list - use <li> for each player
+        const playersListElement = document.getElementById('playersList');
+        playersListElement.innerHTML = '';  // Clear any existing list items
+
+        if (data.players.list && data.players.list.length > 0) {
+            data.players.list.forEach(player => {
+                const li = document.createElement('li');
+                li.textContent = player.name_clean;
+                playersListElement.appendChild(li);
+            });
+        } else {
+            const li = document.createElement('li');
+            li.textContent = 'No players online';
+            playersListElement.appendChild(li);
+        }
 
         // Update server MOTD
         document.getElementById('motdRaw').textContent = data.motd.raw;
