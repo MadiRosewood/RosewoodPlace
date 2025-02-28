@@ -58,14 +58,30 @@ fetch(apiUrl)
         // Update server players
         document.getElementById('playersOnline').textContent = data.players.online;
         document.getElementById('playersMax').textContent = data.players.max;
-        // Update players list - use <li> for each player
+               // Update players list - use <li> for each player
         const playersListElement = document.getElementById('playersList');
         playersListElement.innerHTML = '';  // Clear any existing list items
 
         if (data.players.list && data.players.list.length > 0) {
             data.players.list.forEach(player => {
                 const li = document.createElement('li');
-                li.textContent = player.name_clean;
+                const avatarUrl = `https://mc-heads.net/avatar/${player.name_clean}/100/nohelm.png`;
+
+                // Create an img element for the player's avatar
+                const img = document.createElement('img');
+                img.src = avatarUrl;
+                img.alt = `${player.name_clean}'s Avatar`;
+                img.style.width = '30px';  // Set the avatar size
+                img.style.height = '30px';
+                img.style.marginRight = '10px';  // Space between avatar and name
+
+                // Create a span for the player's name
+                const playerName = document.createElement('span');
+                playerName.textContent = player.name_clean;
+
+                // Append the avatar image and name to the list item
+                li.appendChild(img);
+                li.appendChild(playerName);
                 playersListElement.appendChild(li);
             });
         } else {
