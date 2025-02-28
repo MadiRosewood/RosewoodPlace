@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //minecraft ------------------------
 const apiUrl = 'https://api.mcstatus.io/v2/status/java/play.rosewoodplace.ca';
-
+function fetchServerData() {
 fetch(apiUrl)
     .then(response => {
         if (!response.ok) {
@@ -90,8 +90,12 @@ fetch(apiUrl)
 
 
     })
+}
+// Fetch data immediately when the page loads
+fetchServerData();
 
-
+// Set interval to fetch and refresh data every 10 seconds (10000 milliseconds)
+setInterval(fetchServerData, 10000);
     
 
 
