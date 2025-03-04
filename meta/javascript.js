@@ -61,6 +61,19 @@ fetch(apiUrl)
                // Update players list - use <li> for each player
         const playersListElement = document.getElementById('playersList');
         playersListElement.innerHTML = '';  // Clear any existing list items
+        
+        if(data.mods && data.mods.lenght > 0 ) {
+            const li = document.createElement('li');
+            const modName = document.createElement('span');
+            modName.textContent = mod;
+             li.appendChild(modName);
+                playersListElement.appendChild(li);
+            });
+          } else {
+            const li = document.createElement('li');
+            li.textContent = 'No active Mod';
+            modListElement.appendChild(li);
+        }
 
         if (data.players.list && data.players.list.length > 0) {
             data.players.list.forEach(player => {
