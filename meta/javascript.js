@@ -47,8 +47,6 @@ fetch(apiUrl)
     })
     .then(data => {
         console.log(data);
-        document.getElementById('serverIcon').src = data.icon;
-        document.getElementById('serverIconImage').src = data.icon;
         // Update server info
         document.getElementById('onlineStatus').textContent = data.online ? 'Online 🟢' : 'Offline 🔴';
         document.getElementById('serverHost').textContent = data.host;
@@ -62,19 +60,13 @@ fetch(apiUrl)
                // Update players list - use <li> for each player
         const playersListElement = document.getElementById('playersList');
         playersListElement.innerHTML = '';  // Clear any existing list items
+
+        // Update server mod
+        document.getElementById('modName').textContent = data.mods.Name;
+        document.getElementById('modVer').textContent = data.mods.Version;
         
-        if(data.mods > 0 ) {
-            const li = document.createElement('li');
-            const modName = document.createElement('span');
-            modName.textContent = data.mods;
-             li.appendChild(modName);
-                playersListElement.appendChild(li);
-            
-          } else {
-            const li = document.createElement('li');
-            li.textContent = 'No active Mod';
-            modListElement.appendChild(li);
-        }
+        
+        
 
         if (data.players.list && data.players.list.length > 0) {
             data.players.list.forEach(player => {
