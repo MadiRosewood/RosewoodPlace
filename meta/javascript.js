@@ -47,7 +47,8 @@ fetch(apiUrl)
     })
     .then(data => {
         console.log(data);
-
+        document.getElementById('serverIcon').src = data.icon;
+        document.getElementById('serverIconImage').src = data.icon;
         // Update server info
         document.getElementById('onlineStatus').textContent = data.online ? 'Online 🟢' : 'Offline 🔴';
         document.getElementById('serverHost').textContent = data.host;
@@ -62,13 +63,13 @@ fetch(apiUrl)
         const playersListElement = document.getElementById('playersList');
         playersListElement.innerHTML = '';  // Clear any existing list items
         
-        if(data.mods && data.mods.lenght > 0 ) {
+        if(data.mods > 0 ) {
             const li = document.createElement('li');
             const modName = document.createElement('span');
-            modName.textContent = mod;
+            modName.textContent = data.mods;
              li.appendChild(modName);
                 playersListElement.appendChild(li);
-            });
+            
           } else {
             const li = document.createElement('li');
             li.textContent = 'No active Mod';
