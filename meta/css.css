@@ -11,6 +11,17 @@
   align-items: center;
   border-radius: 10px;
 }
+#store {
+   position: fixed;
+  width: 90%;
+  height: 75%; /* Set the body height to the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
 
 /* Ensure correct fonts and body styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
