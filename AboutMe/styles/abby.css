@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(110deg,
+    #514283 0%,
+    #514283 20%,
+    #cac5ed 20%,
+    #cac5ed 40%,
+    #e1ddf4 40%,
+    #e1ddf4 60%,
+    #dfcff3 60%,
+    #dfcff3 80%,
+    #f0c3e2 80%,
+    #f0c3e2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px; /* Add padding for small devices */
+}
+
+.img {
+    width: 25vw; /* Use viewport width for responsiveness */
+    height: 25vw; /* Maintain a square aspect ratio */
+    max-width: 150px; /* Limit maximum size */
+    max-height: 150px; /* Limit maximum size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e9b2b2; /* border around the image of 5px */
+}
+
+.Header {
+    width: 100%;
+    padding: 20px;
+    color: rebeccapurple;
+    text-shadow: -1px -1px 0 rgb(23, 3, 42),
+                 1px -1px 0 rgb(23, 3, 42),
+                 -1px 1px 0 rgb(23, 3, 42),
+                 1px 1px 0 rgb(23, 3, 42);
+    background: linear-gradient(90deg,
+            #2196f3 0%,
+            #2196f3 15%,
+            #ffbdd3 15%,
+            #ffbdd3 30%,
+            #fff 30%,
+            #fff 65%,
+            #ffbdd3 65%,
+            #ffbdd3 80%,
+            #2196f3 80%,
+            #2196f3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.body {
+    width: 100%;
+    max-width: 600px; /* Keep the max width */
+    height: auto; /* Allow height to adjust */
+    overflow-y: auto; /* Enable vertical scrolling */
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #371f95, #e91e63);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #88dbff;
+}
+.body .text{
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .img {
+        width: 40vw; /* Increase size on smaller devices */
+        height: 40vw; /* Maintain aspect ratio */
+    }
+
+    .Header {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .body {
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer .text {
+        padding: 8px 30px; /* Adjust footer text padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        font-size: 1.2em; /* Adjust font size for small devices */
+    }
+
+    footer .text {
+        padding: 8px 20px; /* Further adjust footer text padding */
+    }
+}
+

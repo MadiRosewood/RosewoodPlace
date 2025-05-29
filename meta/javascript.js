@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //minecraft ------------------------
 const apiUrl = 'https://api.mcstatus.io/v2/status/java/play.rosewoodplace.ca';
-function fetchServerData() {
+
 fetch(apiUrl)
     .then(response => {
         if (!response.ok) {
@@ -47,6 +47,7 @@ fetch(apiUrl)
     })
     .then(data => {
         console.log(data);
+
         // Update server info
         document.getElementById('onlineStatus').textContent = data.online ? 'Online 🟢' : 'Offline 🔴';
         document.getElementById('serverHost').textContent = data.host;
@@ -57,44 +58,6 @@ fetch(apiUrl)
         // Update server players
         document.getElementById('playersOnline').textContent = data.players.online;
         document.getElementById('playersMax').textContent = data.players.max;
-               // Update players list - use <li> for each player
-        const playersListElement = document.getElementById('playersList');
-        playersListElement.innerHTML = '';  // Clear any existing list items
-
-        // Update server mod
-        document.getElementById('modName').textContent = data.mods.Name;
-        document.getElementById('modVer').textContent = data.mods.Version;
-        
-        
-        
-
-        if (data.players.list && data.players.list.length > 0) {
-            data.players.list.forEach(player => {
-                const li = document.createElement('li');
-                const avatarUrl = `https://mc-heads.net/avatar/${player.name_clean}/100/nohelm.png`;
-
-                // Create an img element for the player's avatar
-                const img = document.createElement('img');
-                img.src = avatarUrl;
-                img.alt = `${player.name_clean}'s Avatar`;
-                img.style.width = '30px';  // Set the avatar size
-                img.style.height = '30px';
-                img.style.marginRight = '10px';  // Space between avatar and name
-
-                // Create a span for the player's name
-                const playerName = document.createElement('span');
-                playerName.textContent = player.name_clean;
-
-                // Append the avatar image and name to the list item
-                li.appendChild(img);
-                li.appendChild(playerName);
-                playersListElement.appendChild(li);
-            });
-        } else {
-            const li = document.createElement('li');
-            li.textContent = 'No players online';
-            playersListElement.appendChild(li);
-        }
 
         // Update server MOTD
         document.getElementById('motdRaw').textContent = data.motd.raw;
@@ -112,12 +75,8 @@ fetch(apiUrl)
 
 
     })
-}
-// Fetch data immediately when the page loads
-fetchServerData();
 
-// Set interval to fetch and refresh data every 10 seconds (10000 milliseconds)
-setInterval(fetchServerData, 10000);
+
     
 
 

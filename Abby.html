@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abby</title>
+    <link rel="stylesheet" href="AboutMe/styles/abby.css">
+</head>
+
+<body>
+    <h1 class="Header">About Abby</h1>
+   
+    <div class="body" id="users">
+        <div id="Abby">
+            <img class="img" id="abbyImage" src="" alt="Abby's Image"> <!-- Empty image tag -->
+            <h1><span id="Name">Placeholder</span></h1>
+            <p>Quote: <span id="Quote"></span></p>
+            <p>Gender: <span id="Prn"></span></p>
+            <p>Age: <span id="Age"></span></p>
+            <p>Height: <span id="Ht"></span></p>
+            <p>Bio: <span id="Bio"></span></p>
+
+        </div>
+    </div>
+    <script src="./AboutMe/scripts/Database.js"></script> <!-- Include the JavaScript file -->
+    <script>
+        // Access the Abby data
+        const users = data.users;
+
+        if (users && users.Abby) {
+            document.getElementById("Name").textContent = users.Abby.name || "Name not available";
+            document.getElementById("Quote").textContent = users.Abby.quote || "Quote not available";
+            document.getElementById("Prn").textContent = users.Abby.prn || "Pronouns not available";
+            document.getElementById("Age").textContent = users.Abby.age || "Age not available";
+            document.getElementById("Ht").textContent = users.Abby.ht || "Height not available";
+            document.getElementById("Bio").textContent = users.Abby.bio || "Bio not available";
+
+            // Set the image source
+            document.getElementById("abbyImage").src = users.Abby.image || ""; // Set image source from the data
+        } else {
+            console.error('Abby data not found in the JSON');
+        }
+    </script>
+</body>
+
+</html>

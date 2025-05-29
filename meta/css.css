@@ -36,27 +36,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-/* Center the list container */
-#playersList {
-    display: flex;
-    flex-direction: column; /* Stack the list items vertically */
-    align-items: center;    /* Center the items horizontally */
-    justify-content: center; /* Center the items vertically (if the list has height) */
-    padding: 0;
-    margin: 0;
-    list-style: none; /* Remove default list bullets */
-}
-
-/* Style each list item */
-#playersList li {
-    font-size: 1.2em;      /* Adjust the font size */
-    color: #333;           /* Set a text color */
-    margin: 5px 0;         /* Add space between items */
-    text-align: center;    /* Ensure text inside the list item is centered */
-}
-
-
 #home nav {
   height: 60vh; /* Set the body height to the viewport height */
   overflow-y: auto; /* Enable vertical scrolling */
@@ -80,7 +59,7 @@ body {
           text-decoration: none; /* Removes the underline */
         }
 
-        #profile {
+        /*#profile {
           max-width: 600px;
           margin: auto;
           background: linear-gradient(45deg, #2196f3, #e91e63);
@@ -88,6 +67,7 @@ body {
           border-radius: 8px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+          */
         #Minecraft {
           max-width: 600px;
           margin: auto;
@@ -112,11 +92,21 @@ body {
 }
 
 /* Styling for chat bubble */
-.message {
+.bot-message {
   position: absolute;
   bottom: 160px;
   /* Adjust to position the chat bubble */
   left: 20px;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.user-message {
+  position: absolute;
+  bottom: 160px;
+  /* Adjust to position the chat bubble */
+  right: 20px;
   background-color: #ffffff;
   padding: 10px 15px;
   border-radius: 10px;
@@ -130,40 +120,14 @@ body {
   font-size: 14px;
   color: #333333;
 }
-
-#chat-form {
-  width: 100%;
-  max-width: 600px;
-  /* Limit form width if needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.user-message p {
+  margin: 0;
+  /* Remove default paragraph margin */
+  font-size: 14px;
+  color: #333333;
 }
 
-#chat-form input[type="text"] {
-  width: calc(100% - 80px);
-  /* Adjust as needed */
-  padding: 10px;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  /* Rounded corners on the left */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
 
-#chat-form input[type="submit"] {
-  width: 80px;
-  /* Fixed width for the submit button */
-  padding: 10px;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  /* Rounded corners on the right */
-  background-color: #4caf50;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
 #settings {
   max-width: 600px;
   margin: auto;
@@ -209,6 +173,26 @@ body {
     -1px 1px 0 rebeccapurple,
     1px 1px 0 rebeccapurple;
   background: linear-gradient(45deg, #2196f3, #e91e63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+h2 {
+  position: fixed;
+  width: 100%;
+  left: 150px;
+  padding: 25px;
+  top: 0;
+
+
+  color: rgb(0, 0, 0);
+  text-shadow:
+    -1px -1px 0 rebeccapurple,
+    1px -1px 0 rebeccapurple,
+    -1px 1px 0 rebeccapurple,
+    1px 1px 0 rebeccapurple;
+ 
   display: flex;
   justify-content: center;
   align-items: center;

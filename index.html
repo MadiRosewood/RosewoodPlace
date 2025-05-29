@@ -9,50 +9,73 @@
     <title>Rosewood Place</title>
     <link rel="stylesheet" href="meta/css.css">
     <script>
-    (function() {
-    var currentUrl = window.location.href;
-
-    // Check if the URL contains '#home' (which is an anchor link)
-    if (currentUrl.includes('#home')) {
-        // Remove '#home' and append 'home' to the URL
-        var newUrl = currentUrl.split('#')[0] + 'home';
-        
-        // If it contains 'index.html', ensure it's replaced
-        newUrl = newUrl.replace('index.html', ''); // Remove 'index.html' if present
-
-        // Update the URL without reloading the page
-        history.pushState(null, '', newUrl);
-    }
-})();
-
-
+        // Redirect to the #home section after the page loads
+        window.onload = function () {
+            window.location.hash = 'home';
+        };
     </script>
-     <script src="./meta/remove-html-extension.js"></script> <!-- Include the JavaScript file -->
+
+    <style>
+        /* Basic styling for the cookie consent banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: none;
+            z-index: 1000;
+        }
+        #cookie-banner button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #cookie-banner button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
+     <!-- Cookie consent banner -->
+     <div id="cookie-banner">
+        <p>We use cookies to track visits and improve your experience. By continuing to use this site, you agree to our use of cookies.</p>
+        <button id="accept-cookie">Accept</button>
+    </div>
     <h1 class="Header">
-        Rosewood Place
+        Rosewood Place 
     </h1>
+    <h2> .ca</h2>
     <div id="home" active>
         <p> Hosted by GitHub Pages</p>
         <nav>
-            <h1>ChatGPT Webpage Generated</h1>
+            <!--<h1>ChatGPT Webpage Generated</h1>-->
             <ul>
-                <li><a href="ChatGPT-Webpage-Generated/chatgpt.html">ChatGPT Print</a></li>
+                <!--<li><a href="ChatGPT-Webpage-Generated/chatgpt.html">ChatGPT Print</a></li>
                 <li><a href="ChatGPT-Webpage-Generated/discord_settings_nitro.html">Discord Settings Nitro</a></li>
                 <li><a href="ChatGPT-Webpage-Generated/zelda_moveset.html">SmashBros [Switch] | Zelda Moveset</a></li>
                 <li><a href="ChatGPT-Webpage-Generated/zelda_moveset-French.html">SmashBros [Switch] | Zelda Moveset
                         French Version</a></li>
                 <li><a href="ChatGPT-Webpage-Generated/zelda_moveset-V2.html">SmashBros [Switch] | Zelda Moveset V2</a>
                 </li>
-
-                <hr> <h1>Coded Webpages</h1>
+            -->
+                <hr> <h1>Funny Webpages</h1>
 
                 <li><a href="ChatGPT-Webpage-Generated/VideoHub/index.html">VideoHub</a></li>
                 <li><a href="ChatGPT-Webpage-Generated/Discord-Dms/index.html">Discord DMS</a></li>
                 <hr>
-                <li><a href="Madi.html">About Madi</a></li>
+                <li><a href="Madi.html">About Madi [Soon]</a></li>
+                <hr> <h1>Porfolio</h1>
+
+                
+            
+                <li><a href="#.html">█▓▒▒░░░Porfolio░░░▒▒▓█ [Soon]</a></li>
             </ul>
         </nav>
 
@@ -85,10 +108,10 @@
     <div id="Minecraft">
         <h1>Official Rosewood Place Minecraft Server </h1>
 
-       <!-- <div id="serverIcon">
+        <div id="serverIcon">
 
-            <img id="serverIconImage" src="https://api.mcstatus.io/v2/icon/play.rosewoodplace.ca" alt="Server Icon">
-        </div>-->
+            <img id="serverIconImage" class="button2" src="" alt="Server Icon">
+        </div>
         <div id="serverInfo">
             <p><strong>Online:</strong> <span id="onlineStatus"></span></p>
             <p><strong>Host:</strong> <span id="serverHost"></span></p>
@@ -106,14 +129,9 @@
         <div id="serverMotd">
             <p><strong>Message of the Day (MOTD):</strong><span id="motdRaw"></span></p>
         </div>
-        <div id="modList">
-            <p><strong>Server Mods:</strong></p>
-            <p>Name: <span id="modName"></span></p>
-            <p>Version: <span id="modVer"></span></p>
-        </div>
-        <ul id="playersList"></ul>
-
-        </div>
+        <iframe width="0" height="0" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/27697357&color=%23e5a8fb&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+    </div>
 
     <div id="settings">
         <h1>Settings</h1>
@@ -226,7 +244,7 @@
                 </a>
             </li>
 
-            <li class="list">
+            <!--<li class="list">
                 <a href="#profile">
                     <span class="icon">
                         <ion-icon name="person-outline"></ion-icon>
@@ -235,6 +253,7 @@
                     <span class="circle"></span>
                 </a>
             </li>
+        -->
             <li class="list">
                 <a href="#Minecraft">
                     <span class="icon">
@@ -245,7 +264,7 @@
                     <span class="circle"></span>
                 </a>
             </li>
-            <li class="list">
+            <!--<li class="list">
                 <a href="chat.html">
                     <span class="icon">
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -254,7 +273,8 @@
                     <span class="circle"></span>
                 </a>
             </li>
-            <li class="list">
+        -->
+           <!-- <li class="list">
                 <a href="#settings">
                     <span class="icon">
                         <ion-icon name="settings-outline"></ion-icon>
@@ -263,6 +283,7 @@
                     <span class="circle"></span>
                 </a>
             </li>
+        -->
             <!-- <li class="list">
           <a href="login.html">
               <span class="icon">
@@ -287,6 +308,86 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="meta/javascript.js"></script>
+    <script>
+        // Function to get a cookie by its name
+        function getCookie(name) {
+            let cookieArr = document.cookie.split(";");
+
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookie = cookieArr[i].trim();
+
+                if (cookie.startsWith(name + "=")) {
+                    return cookie.substring(name.length + 1);
+                }
+            }
+            return null;
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to update visit count
+        function updateVisitCount() {
+            let visitCount = parseInt(getCookie('visitCount')) || 0; // Default to 0 if cookie doesn't exist
+            visitCount++;
+
+            setCookie('visitCount', visitCount, 365); // Set the cookie for 1 year
+
+            return visitCount;
+        }
+
+        // Function to show the cookie banner
+        function showCookieBanner() {
+            let banner = document.getElementById('cookie-banner');
+            banner.style.display = 'block';
+
+            document.getElementById('accept-cookie').addEventListener('click', function () {
+                setCookie('cookieConsent', 'true', 365); // Store user's consent for 1 year
+                banner.style.display = 'none'; // Hide banner
+                sendVisitDataToApi();
+            });
+        }
+
+        // Function to send visit count data to the GoDaddy API
+        function sendVisitDataToApi() {
+            let visitCount = updateVisitCount();
+
+            // Replace the URL with the GoDaddy API or any endpoint you are using
+            const apiUrl = 'https://api.godaddy.com/v1/your-endpoint'; 
+
+            // Prepare your request headers (adjust based on GoDaddy's API authentication method)
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Authorization', 'Bearer your_api_token'); // Authentication token
+
+            let data = {
+                visitCount: visitCount
+            };
+
+            // Send data to API using fetch
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => console.log('Visit data sent successfully:', data))
+            .catch(error => console.error('Error sending visit data:', error));
+        }
+
+        // Check if the user has accepted the cookie consent
+        if (!getCookie('cookieConsent')) {
+            showCookieBanner();
+        } else {
+            // If consent is already given, track the visit and send the data
+            sendVisitDataToApi();
+        }
+    </script>
 </body>
 
 </html>
