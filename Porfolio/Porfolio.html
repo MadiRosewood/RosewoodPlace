@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madison Rosewood | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+           background-color: lightblue;
+            color: #111;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        #virtual,
+        #portraits,
+        #artistic,
+        #travel {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #virtual.active,
+        #portraits.active,
+        #artistic.active,
+        #travel.active {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+
+        nav a:hover {
+            color: hotpink;
+        }
+
+        .gallery div {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 1rem;
+        }
+
+        .gallery img {
+            -webkit-user-drag: none;
+            user-select: none;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .watermark {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <header>Madison Rosewood</header>
+    <nav>
+        <a href="#virtual">Virtual Art</a>
+        <a href="#portraits">Portraits</a>
+        <a href="#artistic">Artistic</a>
+        <a href="#travel">Travel</a>
+        <!--<a href="#">About</a> -->
+    </nav>
+
+    <main class="gallery">
+        <div id="virtual" class="active">
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/1.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/2.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/3.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/4.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/5.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/6.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="2025">
+                <img src="./Virtual/7.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+        </div>
+        <div id="portraits">
+            <div class="image-container" data-created="">
+                <img src="./Reality/1.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/2.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/3.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/4.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/5.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/6.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/7.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+        </div>
+         <div id="artistic">
+            <div class="image-container" data-created="">
+                <img src="./Reality/1.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/2.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/3.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/4.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/5.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/6.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/7.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+        </div>
+         <div id="travel">
+            <div class="image-container" data-created="">
+                <img src="./Reality/1.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/2.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/3.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/4.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/5.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/6.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+            <div class="image-container" data-created="">
+                <img src="./Reality/7.png" alt="Art by Madi">
+                <div class="watermark"></div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && (e.key === "s" || e.key === "u")) {
+            e.preventDefault();
+        }
+    });
+
+    const images = document.querySelectorAll(".image-container");
+
+    images.forEach(imgBox => {
+        const watermark = imgBox.querySelector(".watermark");
+        const createdYear = imgBox.dataset.created; // From HTML
+        const currentYear = new Date().getFullYear();
+
+        watermark.innerText = `© Madison Rosewood, ${createdYear}–${currentYear}`;
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main > div');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Get the target ID from href, e.g., "#portraits" → "portraits"
+                const targetId = this.getAttribute('href').substring(1);
+
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show the target section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+
+    });
+</script>
+
+
+</html>
