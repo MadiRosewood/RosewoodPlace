@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  padding: 3rem 1rem 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  background: #e4d5f0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+h1 {
+  margin: 0 0 4rem;
+  text-align: center;
+  font-size: 1.6em;
+  color: #bd98db;
+}
+
+.wrap-cards {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  max-width: 100%;
+  margin: 0 0 4rem;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.25);
+  background-color: #D5BEE8;
+}
+.card .wrap-image {
+  position: relative;
+}
+.card .wrap-image img {
+  width: 100%;
+  height: auto;
+}
+.card .wrap-image svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+}
+.card .wrap-image svg polygon, .card .wrap-image svg path {
+  fill: #D5BEE8;
+  stroke: #D5BEE8;
+}
+.card:nth-child(4) .wrap-image svg path {
+  stroke-width: 3px;
+}
+.card:nth-child(5) .wrap-image svg path {
+  stroke-width: 4px;
+}
+.card:nth-child(6) .wrap-image svg path {
+  stroke-width: 6px;
+}
+.card .contents {
+  padding: 1rem;
+}
+.card .contents h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.125em;
+  color: #fff;
+}
+.card .contents .text {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  font-size: .9em;
+}
+
+@media all and (max-width: 768px) {
+  .card {
+    width: 49%;
+    margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+/*----*/
+
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0.1rem;
+  margin-right: 0.2rem;
+}
+
+/* 
+You can't control the size with list-style-image
+
+ul.list-style {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
+}
+*/
+
+
+/* 
+If you use the image directly as pseudo element, you can't size it:
+
+ul li::before {
+  content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+*/
+
+/*----------*/

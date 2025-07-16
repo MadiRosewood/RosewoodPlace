@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+/* RÉINITIALISATION */
+* {
+    margin: 5pt;
+    padding: 10pt;
+    box-sizing: border-box;
+}
+
+/* CHARTE TYPO */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Choix de la police de caractère */
+}
+
+/* STYLES GÉNÉRAUX */
+/* hyperliens */
+a {
+    font-size: .7rem;
+    color: blue;
+    text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+/* paragraphes */
+p {
+    margin-top: 0.2em;
+    margin-bottom: .8em;
+}
+
+/* images */
+figure {
+    width: 80%;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+}
+
+figcaption {
+    font-size: 0.7em;
+}
+
+img {
+    width: 100%;
+}
+
+/*HEADER PRINCIPAL */
+/* nom du site */
+header {
+    text-align: center;
+}
+
+header p:first-child {
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+header p:first-child(2) {
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+/* banniere */
+header img {
+    border-bottom: solid 2px green;
+    border-top: solid 3px green;
+}
+
+/* navigation principale */
+nav {
+    border-bottom: solid 1px red;
+    padding-top: .6em;
+    padding-bottom: .6em;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+il {
+    margin: 0 1em;
+}
+
+/* ARTICLE */
+article {
+    width: 520px;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+/* header */
+article header p:first-of-type {
+    font-size: .9em;
+    margin-top: 1em;
+    margin-bottom: .7em;
+}
+
+article h1 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+article h1 + p {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+article h1 + p a {
+    font-size: 1.4em;
+}
+
+/* sous-titres */
+articles h2 {
+    font-size: .9em;
+    color: aliceblue;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+
+/* texte */
+article p {
+    font-size: .82em;
+}
+
+/* footer de l'article */
+article footer {
+    font-size: .9em;
+    color: aliceblue;
+    text-align: left;
+    background-color: white;
+    padding-top: .2em;
+    padding-bottom: 0;
+    border-top: solid 1px white;
+    display: inline-block;
+    width: 45%;
+    margin-top: .8em;
+    margin-bottom: 1em;
+}
+
+/* FOOTER PRINCIPAL */
+footer {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer h2 {
+    font-size: .9em;
+    color: #cccccc;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+
+small {
+    display: block;
+    font-size: .6em;
+    margin-top: 2em;
+    color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* formulaire */
+article {
+    font-family: sans-serif;
+    resize: both;
+}
+
+fieldset {
+    margin-top: 3pt;
+    margin-bottom: 3pt;
+    padding: ;
+    border-style: groove;
+    border-width: 5;
+    border-color: pink
+}
+
+legend {
+    padding: ;
+    background-color: black;
+    border-radius: 5pt;
+    color: palevioletred;
+    font-family: monospace;
+}
+
+div {
+    padding: 6pt;
+    display: table;
+}
+
+label:first-child {
+    display: flex;
+    width: 80pt;
+    padding-right: 5pt;
+    text-align: right;
+    font-family: sans-serif;
+}
+
+input[type="radio"] {
+    margin-left: 5pt;
+}
+
+input[type="radio"] + label {
+    text-align: ;
+    width: ;
+    font-family: monospace;
+}
+
+textarea {
+    width: 800p;
+    height: 50p;
+    padding: ;
+    font-family: monospace;
+}
+
+input[type="submit"] {
+    padding: ;
+    outline-style: hidden;
+    font-family: serif;
+}
+
+/* tableau */
+article {
+    font-family: sans-serif;
+    width: ;
+    margin: ;
+}
+
+table {
+    border-collapse: separate;
+    border-style: ;
+    border-width: ;
+    border-color: red;
+    width: ;
+}
+
+caption {
+    font-variant: ;
+}
+
+th {
+    color: red;
+    border-style: double;
+    border-width: 5pt;
+    border-color: red;
+    padding: ;
+    background-color: ;
+}
+
+td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    padding: ;
+    text-align: center;
+    background-color: ;
+}
+
+tfoot {
+    font-size: 20pt;
+}
