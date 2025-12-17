@@ -68,7 +68,7 @@ const data = {
             "age": age3,
             "ht": "5'9\"",
             "bio": ":3",
-            "image": "https://placehold.co/150x150"
+            "image": "./AboutMe/img/abby.jpg"
         }
     }
 };
