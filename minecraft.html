@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Place</title>
+    <link rel="stylesheet" href="meta/css.css">
+    <script>
+        // Redirect to the #home section after the page loads
+        window.onload = function () {
+            window.location.hash = 'home';
+        };
+    </script>
+
+    <style>
+        /* Basic styling for the cookie consent banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: none;
+            z-index: 1000;
+        }
+
+        #cookie-banner button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        #cookie-banner button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+     <h1 class="Header">
+        Rosewood Place
+    </h1>
+    <h2> .ca</h2>
+<div id="Minecraft" active="">
+        <h1>Rosewood Place Minecraft Server </h1>
+
+        <div id="serverIcon">
+
+            <img id="serverIconImage" class="button2" src="" alt="Server Icon">
+        </div>
+        <div id="serverInfo">
+            <p><strong>Online:</strong> <span id="onlineStatus"></span></p>
+            <p><strong>Host:</strong> <span id="serverHost"></span></p>
+        </div>
+
+        <div id="serverVersion">
+            <p><strong>Server Version:</strong> <span id="versionName"></span></p>
+        </div>
+
+        <div id="serverPlayers">
+            <p><strong>Players Online:</strong> <span id="playersOnline"></span><strong> /</strong> <span
+                    id="playersMax"></span></p>
+        </div>
+
+        <div id="serverMotd">
+            <p><strong>Message of the Day (MOTD):</strong><span id="motdRaw"></span></p>
+        </div>
+
+        <a href="/meta/Red Panda-forge-1.21.1-1.0.3.jar" download>
+            <p>Required Mods: Red Panda-forge-1.21.1-1.0.3.jar</p>
+            <div class="indicator"></div>
+            </ul>
+    </div>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <script src="meta/javascript.js"></script>
+     </body>
+     </html>

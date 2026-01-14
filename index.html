@@ -29,6 +29,7 @@
             display: none;
             z-index: 1000;
         }
+
         #cookie-banner button {
             background-color: #4CAF50;
             color: white;
@@ -36,6 +37,7 @@
             padding: 8px 16px;
             cursor: pointer;
         }
+
         #cookie-banner button:hover {
             background-color: #45a049;
         }
@@ -43,374 +45,123 @@
 </head>
 
 <body>
-     <!-- Cookie consent banner -->
-     <div id="cookie-banner">
-        <p>We use cookies to track visits and improve your experience. By continuing to use this site, you agree to our use of cookies.</p>
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner">
+        <p>We use cookies to track visits and improve your experience. By continuing to use this site, you agree to our
+            use of cookies.</p>
         <button id="accept-cookie">Accept</button>
     </div>
     <h1 class="Header">
-        Rosewood Place 
+        Rosewood Place
     </h1>
     <h2> .ca</h2>
-    <div id="home" active>
+    <div id="home">
+    
+        <h3>UnderConstruction</h3>
         <p> Hosted by GitHub Pages</p>
         <nav>
-            <!--<h1>ChatGPT Webpage Generated</h1>-->
             <ul>
-                <!--<li><a href="ChatGPT-Webpage-Generated/chatgpt.html">ChatGPT Print</a></li>
-                <li><a href="ChatGPT-Webpage-Generated/discord_settings_nitro.html">Discord Settings Nitro</a></li>
-                <li><a href="ChatGPT-Webpage-Generated/zelda_moveset.html">SmashBros [Switch] | Zelda Moveset</a></li>
-                <li><a href="ChatGPT-Webpage-Generated/zelda_moveset-French.html">SmashBros [Switch] | Zelda Moveset
-                        French Version</a></li>
-                <li><a href="ChatGPT-Webpage-Generated/zelda_moveset-V2.html">SmashBros [Switch] | Zelda Moveset V2</a>
-                </li>
-            -->
-            <!--<hr> <h1>Funny Webpages</h1>
-
-                <li><a href="ChatGPT-Webpage-Generated/VideoHub/index.html">VideoHub</a></li>
-                <li><a href="ChatGPT-Webpage-Generated/Discord-Dms/index.html">Discord DMS</a></li>
--->
-                <hr>
-                <li><a href="Madi.html">About Madi</a></li>
-                <li><a href="Abby.html">About Abby</a></li>
-                 <li><a href="WEBSITE/index.html">College Homework</a></li>
-                <hr> <h1>Porfolio</h1>
-
-                
-            
-                <li><a href="./Porfolio/Porfolio.html">█▓▒▒░░░Porfolio░░░▒▒▓█</a></li>
+                <li><a href="minecraft.html"> Looking for MC server?</a></li>
             </ul>
         </nav>
-
+    
     </div>
 
-    <div id="profile">
-        <div id="profile-header">
-            <foreignObject x="0" y="0" width="80" height="80" mask="url(#svg-mask-avatar-status-round-80)">
-                <div class="avatarStack__6604a">
-                    <img id="profile-picture" src="https://example.com/path/to/profile-picture.jpg"
-                        alt="Profile picture" class="avatar__991e2" aria-hidden="true">
-                </div>
-            </foreignObject>
-            <h1 id="display-name">Display Name</h1>
-            <p id="username">@Username </p>
-            <p id="followers-count">Followers: </p>
-            <p id="following-count">Following: </p>
-        </div>
-        <button id="showAbout">About</button>
-        <button id="showCreations">Creations</button>
-        <div id="about" class="section">
-            <h2>About</h2>
-            <p></p>
-            <p></p>
-        </div>
-        <div id="creations" class="section">
-            <h2>Creations</h2>
-        </div>
 
-    </div>
+
+    <!--</div>
          <div id="store">
         <iframe src="./Store/index.html" width="100%" height="90%" style="border:none;"></iframe>
 
-     </div>
-    <div id="Minecraft">
-        <h1>Official Rosewood Place Minecraft Server </h1>
+     </div>-->
+    
 
-        <div id="serverIcon">
+   
 
-            <img id="serverIconImage" class="button2" src="" alt="Server Icon">
-        </div>
-        <div id="serverInfo">
-            <p><strong>Online:</strong> <span id="onlineStatus"></span></p>
-            <p><strong>Host:</strong> <span id="serverHost"></span></p>
-        </div>
 
-        <div id="serverVersion">
-            <p><strong>Server Version:</strong> <span id="versionName"></span></p>
-        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="meta/javascript.js"></script>
+        <script>
+            // Function to get a cookie by its name
+            function getCookie(name) {
+                let cookieArr = document.cookie.split(";");
 
-        <div id="serverPlayers">
-            <p><strong>Players Online:</strong> <span id="playersOnline"></span><strong> /</strong> <span
-                    id="playersMax"></span></p>
-        </div>
+                for (let i = 0; i < cookieArr.length; i++) {
+                    let cookie = cookieArr[i].trim();
 
-        <div id="serverMotd">
-            <p><strong>Message of the Day (MOTD):</strong><span id="motdRaw"></span></p>
-        </div>
-
-         <a href="/meta/Red Panda-forge-1.21.1-1.0.3.jar" download>
-  <p>Required Mods: Red Panda-forge-1.21.1-1.0.3.jar</p>
-</a>
-
-        <iframe width="0" height="0" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/27697357&color=%23e5a8fb&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-    </div>
-
-    <div id="settings">
-        <h1>Settings</h1>
-
-        <div class="cookie-checkbox">
-            <label>
-                <input type="checkbox"> Allow cookies
-            </label>
-        </div>
-        <div id="register">
-            <div class="wrapper">
-                <form action="">
-                    <h2>Create Account</h2>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" placeholder="E-mail" required>
-                    </div>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" placeholder="Confirm E-mail" required>
-                    </div>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" placeholder="Confirm Password" required>
-                    </div>
-                    <button type="submit" class="btn">Register</button>
-                    <div class="sign-link">
-                        <p>Already have an account? <a href="#.html" class="login-link">Login</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div id="login">
-            <div class="wrapper">
-                <form action="">
-                    <h2>Login</h2>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" placeholder="Username" required>
-                    </div>
-                    <div class="input-group">
-                        <span class="icon">
-                            <ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="forgot-pass">
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="sign-link">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-        <div class="auth-buttons">
-            <ul>
-                <li>
-                    <a href="#register">
-                        <span class="icon">
-                            <ion-icon name="register-outline"></ion-icon>
-                        </span>
-                        <span class="text">Register</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#login">
-                        <span class="icon">
-                            <ion-icon name="login-outline"></ion-icon>
-                        </span>
-                        <span class="text">Login</span>
-                    </a>
-                </li>
-
-        </div>
-    </div>
-
-    <div class="navigation">
-        <ul>
-            <li class="list active">
-                <a href="#home">
-                    <span class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </span>
-                    <span class="text">Home</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-
-            <!--<li class="list">
-                <a href="#profile">
-                    <span class="icon">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </span>
-                    <span class="text">Profile</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-        -->
-            <li class="list">
-                <a href="#store">
-                    <span class="icon">
-                        <ion-icon name="bag-outline"></ion-icon>
-                    </span>
-                    <span class="text">Store</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-        
-            <li class="list">
-                <a href="#Minecraft">
-                    <span class="icon">
-                        <img src="meta/mc_icon.png" alt="MC Icon" width="20" height="20"
-                            style="position: relative; top: -1.5px;">
-                    </span>
-                    <span class="text">Minecraft Server</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-            <!--<li class="list">
-                <a href="chat.html">
-                    <span class="icon">
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                    </span>
-                    <span class="text">Message</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-        -->
-           <!-- <li class="list">
-                <a href="#settings">
-                    <span class="icon">
-                        <ion-icon name="settings-outline"></ion-icon>
-                    </span>
-                    <span class="text">Settings</span>
-                    <span class="circle"></span>
-                </a>
-            </li>
-        -->
-            <!-- <li class="list">
-          <a href="login.html">
-              <span class="icon">
-                  <ion-icon name="login-outline"></ion-icon>
-              </span>
-              <span class="text">Login</span>
-              <span class="circle"></span>
-          </a>
-      </li>
-       <li class="list">
-        <a href="register.html">
-            <span class="icon">
-                <ion-icon name="register-outline"></ion-icon>
-            </span>
-            <span class="text">Register</span>
-            <span class="circle"></span>
-        </a>
-    </li> -->
-            <div class="indicator"></div>
-        </ul>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="meta/javascript.js"></script>
-    <script>
-        // Function to get a cookie by its name
-        function getCookie(name) {
-            let cookieArr = document.cookie.split(";");
-
-            for (let i = 0; i < cookieArr.length; i++) {
-                let cookie = cookieArr[i].trim();
-
-                if (cookie.startsWith(name + "=")) {
-                    return cookie.substring(name.length + 1);
+                    if (cookie.startsWith(name + "=")) {
+                        return cookie.substring(name.length + 1);
+                    }
                 }
+                return null;
             }
-            return null;
-        }
 
-        // Function to set a cookie
-        function setCookie(name, value, days) {
-            let date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + date.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                let expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
 
-        // Function to update visit count
-        function updateVisitCount() {
-            let visitCount = parseInt(getCookie('visitCount')) || 0; // Default to 0 if cookie doesn't exist
-            visitCount++;
+            // Function to update visit count
+            function updateVisitCount() {
+                let visitCount = parseInt(getCookie('visitCount')) || 0; // Default to 0 if cookie doesn't exist
+                visitCount++;
 
-            setCookie('visitCount', visitCount, 365); // Set the cookie for 1 year
+                setCookie('visitCount', visitCount, 365); // Set the cookie for 1 year
 
-            return visitCount;
-        }
+                return visitCount;
+            }
 
-        // Function to show the cookie banner
-        function showCookieBanner() {
-            let banner = document.getElementById('cookie-banner');
-            banner.style.display = 'block';
+            // Function to show the cookie banner
+            function showCookieBanner() {
+                let banner = document.getElementById('cookie-banner');
+                banner.style.display = 'block';
 
-            document.getElementById('accept-cookie').addEventListener('click', function () {
-                setCookie('cookieConsent', 'true', 365); // Store user's consent for 1 year
-                banner.style.display = 'none'; // Hide banner
+                document.getElementById('accept-cookie').addEventListener('click', function () {
+                    setCookie('cookieConsent', 'true', 365); // Store user's consent for 1 year
+                    banner.style.display = 'none'; // Hide banner
+                    sendVisitDataToApi();
+                });
+            }
+
+            // Function to send visit count data to the GoDaddy API
+            function sendVisitDataToApi() {
+                let visitCount = updateVisitCount();
+
+                // Replace the URL with the GoDaddy API or any endpoint you are using
+                const apiUrl = 'https://api.godaddy.com/v1/your-endpoint';
+
+                // Prepare your request headers (adjust based on GoDaddy's API authentication method)
+                let headers = new Headers();
+                headers.append('Content-Type', 'application/json');
+                headers.append('Authorization', 'Bearer your_api_token'); // Authentication token
+
+                let data = {
+                    visitCount: visitCount
+                };
+
+                // Send data to API using fetch
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(data => console.log('Visit data sent successfully:', data))
+                    .catch(error => console.error('Error sending visit data:', error));
+            }
+
+            // Check if the user has accepted the cookie consent
+            if (!getCookie('cookieConsent')) {
+                showCookieBanner();
+            } else {
+                // If consent is already given, track the visit and send the data
                 sendVisitDataToApi();
-            });
-        }
-
-        // Function to send visit count data to the GoDaddy API
-        function sendVisitDataToApi() {
-            let visitCount = updateVisitCount();
-
-            // Replace the URL with the GoDaddy API or any endpoint you are using
-            const apiUrl = 'https://api.godaddy.com/v1/your-endpoint'; 
-
-            // Prepare your request headers (adjust based on GoDaddy's API authentication method)
-            let headers = new Headers();
-            headers.append('Content-Type', 'application/json');
-            headers.append('Authorization', 'Bearer your_api_token'); // Authentication token
-
-            let data = {
-                visitCount: visitCount
-            };
-
-            // Send data to API using fetch
-            fetch(apiUrl, {
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => console.log('Visit data sent successfully:', data))
-            .catch(error => console.error('Error sending visit data:', error));
-        }
-
-        // Check if the user has accepted the cookie consent
-        if (!getCookie('cookieConsent')) {
-            showCookieBanner();
-        } else {
-            // If consent is already given, track the visit and send the data
-            sendVisitDataToApi();
-        }
-    </script>
+            }
+        </script>
 </body>
 
 </html>

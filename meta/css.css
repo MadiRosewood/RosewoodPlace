@@ -1,6 +1,5 @@
 /* Hide sections by default */
 #profile,
-#Minecraft,
 #settings {
   position: fixed;
   width: 400px;

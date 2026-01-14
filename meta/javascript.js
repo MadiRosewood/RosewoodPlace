@@ -1,4 +1,4 @@
-const list = document.querySelectorAll('.list');
+/*const list = document.querySelectorAll('.list');
 function activeLink() {
     list.forEach((item) =>
     item.classList.remove('active'));
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // Hide all sections
-            const allSections = document.querySelectorAll('#home, #store, #Minecraft, #settings,#settings #register,#settings #login');
+            const allSections = document.querySelectorAll('#home, #Minecraft');
             allSections.forEach(section => {
                 section.style.display = 'none';
             });
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(targetId).style.display = 'block';
         });
     });
-});
+});*/
 
 //minecraft ------------------------
 const apiUrl = 'https://api.mcstatus.io/v2/status/java/play.rosewoodplace.ca';
@@ -79,7 +79,7 @@ fetch(apiUrl)
 
     
 
-
+/* 
 //Profile ------
 
 // Assuming you have references to your elements
@@ -125,3 +125,4 @@ showCreations.addEventListener("click", () => {
     }
     creations.style.display = "block";
 });
+*/
